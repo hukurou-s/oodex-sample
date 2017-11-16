@@ -7,6 +7,8 @@ public class Sample {
     }
 
 	public int returnOneValue() {
+        // @[1;returnOneValue
 		return 1;
+        // @]1
 	}
 }
