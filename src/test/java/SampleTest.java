@@ -14,6 +14,6 @@ public class SampleTest {
 	@Test
 	public void test2() {
 		Sample sample = new Sample();
-		assertEquals("aaa", 1, sample.returnOneValue());
+		assertEquals("aaa", 2, sample.returnOneValue());
 	}
 }

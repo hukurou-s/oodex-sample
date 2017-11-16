@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+require 'json'
+
+result = STDIN.map.grep(/(SUCCESS|FAILURE)$/).map do |line|
+  {
+    message: line.chomp,
+    status: line.split(' ').last.chomp,
+    target: line.match(/\[(.)*\]/),
+  }
+end
+
+puts JSON.dump(result)

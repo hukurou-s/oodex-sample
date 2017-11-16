@@ -1,0 +1,10 @@
+[
+  {
+    "name": "sample test1",
+    "command": "./gradlew cleanTest test --tests test.java.SampleTest.test1 2>&1 >/dev/null | parser/junit.parser"
+  },
+  {
+    "name": "sample test2",
+    "command": "./gradlew cleanTest test --tests test.java.SampleTest.test2 2>&1 >/dev/null | parser/junit.parser"
+  }
+]
