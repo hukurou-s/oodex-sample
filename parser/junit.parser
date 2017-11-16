@@ -2,11 +2,19 @@
 
 require 'json'
 
-result = STDIN.map.grep(/(SUCCESS|FAILURE)$/).map do |line|
-  {
-    message: line.chomp,
-    status: line.split(' ').last.chomp,
-    target: line.match(/\[(.)*\]/),
+begin
+  result = STDIN.map.grep(/(SUCCESS|FAILURE)$/).map do |line|
+    {
+      message: line.chomp,
+      status: line.split(' ').last.chomp,
+      target: line.match(/\[(.)*\]/).to_s&.gsub(/\[|\]/, ''),
+    }
+  end
+rescue => e
+  result = {
+    message: e.message,
+    status: 'PARSE ERROR',
+    target: 'NONE',
   }
 end
 
