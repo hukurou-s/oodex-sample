@@ -1,0 +1,5 @@
+/bin
+/build
+/.settings
+.gradle
+!gradle-wrapper.jar
