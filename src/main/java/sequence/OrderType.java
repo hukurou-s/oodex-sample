@@ -1,0 +1,6 @@
+package main.java.sequence;
+
+public enum OrderType {
+    ASC, // 1, 2, 3, 4, 5 ...
+    DESC, // 5, 4, 3, 2, 1 ...
+}

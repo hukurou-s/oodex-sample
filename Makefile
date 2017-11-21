@@ -1,6 +1,6 @@
 JAVAC      = javac
 JAVA       = java
-MAIN       = main.java.Sample
+MAIN       = main.java.Main
 SOURCES    = $(wildcard src/main/**/*.java)
 FLAGS      = -encoding UTF-8 -Xlint:deprecation -J-Dfile.encoding=UTF-8
 CLASS_PATH = -classpath src/
