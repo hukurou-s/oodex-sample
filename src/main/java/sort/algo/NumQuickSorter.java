@@ -101,6 +101,11 @@ public class NumQuickSorter {
         // do nothing
     }
 
+    /**
+     * 振分処理
+     * @param range {Pos}
+     * @return {Pos}
+     */
     private Pos partition(final Pos range) {
         return this.partition(range.getLeft(), range.getRight());
     }
@@ -109,7 +114,7 @@ public class NumQuickSorter {
      * 振分処理
      * @param left {int}
      * @param right {int}
-     * @return {int}
+     * @return {Pos}
      */
     private Pos partition(int left, int right) {
         NumData pivot = this.getPivot(left, right);

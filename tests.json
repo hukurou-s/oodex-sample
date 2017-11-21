@@ -1,10 +1,22 @@
 [
   {
-    "name": "sample test1",
-    "command": "./gradlew test --tests test.java.MainTest.end2end_SimpleSorter_insert 2>&1 >/dev/null | parser/junit.parser"
+    "name": "挿入ソートの全体テスト",
+    "command": "./gradlew cleanTest test --tests test.java.MainTest.end2end_SimpleSorter_insert | parser/junit.parser"
   },
   {
-    "name": "sample test2",
-    "command": "./gradlew test --tests test.java.MainTest.end2end_SimpleSorter_gnome 2>&1 >/dev/null | parser/junit.parser"
+    "name": "選択ソートの全体テスト",
+    "command": "./gradlew cleanTest test --tests test.java.MainTest.end2end_SimpleSorter_select | parser/junit.parser"
+  },
+  {
+    "name": "グノームソートの全体テスト",
+    "command": "./gradlew cleanTest test --tests test.java.MainTest.end2end_SimpleSorter_gnome | parser/junit.parser"
+  },
+  {
+    "name": "シェーカーソートの全体テスト",
+    "command": "./gradlew cleanTest test --tests test.java.MainTest.end2end_SimpleSorter_shaker | parser/junit.parser"
+  },
+  {
+    "name": "トランスソートの全体テスト",
+    "command": "./gradlew cleanTest test --tests test.java.MainTest.end2end_SimpleSorter_trans | parser/junit.parser"
   }
 ]

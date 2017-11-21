@@ -19,4 +19,22 @@ public class MainTest {
 		NumSimpleSorter.gnome(seq);
 		assertTrue(seq.isSorted());
 	}
+
+	@Test public void end2end_SimpleSorter_select() {
+		NumDataSequence seq = NumSequenceGenerator.generateByShuffle(100,0.05);
+		NumSimpleSorter.select(seq);
+		assertTrue(seq.isSorted());
+	}
+
+	@Test public void end2end_SimpleSorter_shaker() {
+		NumDataSequence seq = NumSequenceGenerator.generateByShuffle(100,0.05);
+		NumSimpleSorter.shaker(seq);
+		assertTrue(seq.isSorted());
+	}
+
+	@Test public void end2end_SimpleSorter_trans() {
+		NumDataSequence seq = NumSequenceGenerator.generateByShuffle(100,0.05);
+		NumSimpleSorter.trans(seq);
+		assertTrue(seq.isSorted());
+	}
 }

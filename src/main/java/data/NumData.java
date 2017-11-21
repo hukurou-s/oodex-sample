@@ -29,9 +29,9 @@ public class NumData {
 
     /**
      * 中央値を返却する
-     * @param {NumData} a
-     * @param {NumData} b
-     * @param {NumData} c
+     * @param a {NumData}
+     * @param b {NumData}
+     * @param c {NumData}
      * @return {NumData}
      */
     public static NumData getMiddleValue3(final NumData a, final NumData b, final NumData c) {
@@ -42,9 +42,17 @@ public class NumData {
         return c;
     }
 
+    /**
+     * 自身とNumDate自身を比較する (a < b)
+     * @param d {NumData} 右辺
+     * @return {NumData}
+     */
     public ComparedState compare(NumData d) {
+        // a > b のとき
         if (this.raw > d.value()) return ComparedState.GT;
+        // a < b のとき
         else if (this.raw < d.value()) return ComparedState.LT;
+        // a == b のとき
         else return ComparedState.EQ;
     }
 }
