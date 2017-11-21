@@ -1,10 +1,10 @@
 [
   {
     "name": "sample test1",
-    "command": "./gradlew test --tests test.java.SampleTest.test1 2>&1 >/dev/null | parser/junit.parser"
+    "command": "./gradlew test --tests test.java.MainTest.end2end_SimpleSorter_insert 2>&1 >/dev/null | parser/junit.parser"
   },
   {
     "name": "sample test2",
-    "command": "./gradlew test --tests test.java.SampleTest.test2 2>&1 >/dev/null | parser/junit.parser"
+    "command": "./gradlew test --tests test.java.MainTest.end2end_SimpleSorter_gnome 2>&1 >/dev/null | parser/junit.parser"
   }
 ]

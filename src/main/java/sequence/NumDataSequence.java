@@ -162,9 +162,11 @@ public class NumDataSequence {
         for (int i = 1; i < range; i++) {
             switch (type) {
             case ASC:
-                if (this.orderBy(i - 1, i, OrderType.ASC)) { return false; }
+                if (!this.orderBy(i - 1, i, OrderType.ASC)) { return false; }
+                break;
             case DESC:
-                if (this.orderBy(i - 1, i, OrderType.DESC)) { return false; }
+                if (!this.orderBy(i - 1, i, OrderType.DESC)) { return false; }
+                break;
             }
         }
         return true;
