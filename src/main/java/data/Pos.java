@@ -8,6 +8,8 @@ public class Pos {
         this.left = left;
         this.right = right;
     }
+
+    public int getDistance() { return right - left;}
     
     public boolean isInteraval() {
         return this.left < this.right;

@@ -2,6 +2,7 @@ package main.java.sequence;
 
 import main.java.data.ComparedState;
 import main.java.data.NumData;
+import main.java.data.Pos;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -82,6 +83,31 @@ public class NumDataSequence {
         default:
             return false;
         }
+    }
+
+    public NumDataSequence copy() {
+        return new NumDataSequence(this.getAll());
+    }
+
+    public NumDataSequence slice(int left, int right) {
+        return this.slice(new Pos(left, right));
+    }
+
+    public NumDataSequence slice(final Pos range) {
+        NumData dataSet[] = new NumData[range.getDistance()];
+        for (int j = 0, i = range.getLeft(); i < range.getRight(); i++, j++) {
+            dataSet[j] = this.get(i);
+        }
+        return new NumDataSequence(dataSet);
+    }
+
+    public NumDataSequence merge(final NumDataSequence seq) {
+        NumData dataSet[] = new NumData[this.size() + seq.size()];
+
+        for (int i = 0; i < this.size(); i++) dataSet[i] = this.get(i);
+        for (int i = 0; i < seq.size(); i++) dataSet[i] = seq.get(i);
+
+        return new NumDataSequence(dataSet);
     }
 
     /**

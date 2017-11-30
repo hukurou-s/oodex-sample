@@ -11,11 +11,13 @@ public class NumSequenceGenerator {
      * @return NumDataSequence
      */
     public static NumDataSequence generateOfSorted(int size) {
+        // ![1
         NumData[] seq = new NumData[size];
         for (int i = 0; i < size; i++) {
             seq[i] = new NumData(i);
         }
         return new NumDataSequence(seq);
+        // !]
     }
 
     /**
@@ -24,12 +26,14 @@ public class NumSequenceGenerator {
      * @return NumDataSequence
      */
     public static NumDataSequence generateByRandom(int size) {
+        // ![2
         NumData[] seq = new NumData[size];
         Random randFunc = new Random();
         for (int i = 1; i < size; i++) {
             seq[i] = new NumData(randFunc.nextInt(i));
         }
         return new NumDataSequence(seq);
+        // !]
     }
 
     /**
@@ -39,6 +43,7 @@ public class NumSequenceGenerator {
      * @return NumDataSequence
      */
     public static NumDataSequence generateByShuffle(int size, double probability) {
+        // ![3
         NumDataSequence dataSequence = NumSequenceGenerator.generateOfSorted(size);
         for (int i = 1; i < size; i++) {
             Random randFunc = new Random();
@@ -47,6 +52,7 @@ public class NumSequenceGenerator {
             dataSequence.swap(i, right, false);
         }
         return dataSequence;
+        // !]
     }
 
     /**
@@ -56,6 +62,7 @@ public class NumSequenceGenerator {
      * @return
      */
     public static NumDataSequence generateByExchange(int size, int count) {
+        // ![4
         NumDataSequence dataSequence = NumSequenceGenerator.generateOfSorted(size);
         Random randFunc = new Random();
         while (count > 0) {
@@ -65,5 +72,6 @@ public class NumSequenceGenerator {
             count--;
         }
         return dataSequence;
+        // !]
     }
 }
