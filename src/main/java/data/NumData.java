@@ -4,7 +4,9 @@ public class NumData {
     private Integer raw = 0;
 
     public NumData(Integer num) {
+        // ![
         this.raw = num;
+        // !]
     }
 
     public Integer value() {
