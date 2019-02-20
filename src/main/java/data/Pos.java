@@ -5,8 +5,10 @@ public class Pos {
     private int right;
 
     public Pos(int left, int right) {
+        // ![1
         this.left = left;
         this.right = right;
+        // !]
     }
 
     public int getDistance() { return right - left;}
