@@ -4,7 +4,7 @@ public class NumData {
     private Integer raw = 0;
 
     public NumData(Integer num) {
-        // ![
+        // ![1
         this.raw = num;
         // !]
     }
@@ -37,11 +37,13 @@ public class NumData {
      * @return {NumData}
      */
     public static NumData getMiddleValue3(final NumData a, final NumData b, final NumData c) {
+        // ![2
         if (within(b, a, c)) return a;
         else if (within(c, a, b)) return a;
         else if (within(a, b, c)) return b;
         else if (within(c, b, a)) return b;
         return c;
+        // !]
     }
 
     /**
