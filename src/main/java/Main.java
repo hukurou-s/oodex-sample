@@ -9,9 +9,15 @@ import main.java.sort.simple.NumSimpleSorter;
 
 public class Main {
     public static void main(String args[]) {
-        NumDataSequence seq = NumSequenceGenerator.generateByShuffle(100, 0.05);
+        NumDataSequence seq = NumSequenceGenerator.generateByShuffle(100, 0.5);
+        NumDataOutput.puts(seq);
+        // NumSimpleSorter.select(seq);
+        NumSimpleSorter.insert(seq);
+        // NumSimpleSorter.gnome(seq);
+        // NumSimpleSorter.shaker(seq);
+        // NumSimpleSorter.trans(seq);
         // NumQuickSorter.sort(seq);
-        NumMergeSorter.sort(seq);
+        // NumMergeSorter.sort(seq);
         NumDataOutput.puts(seq);
     }
 }

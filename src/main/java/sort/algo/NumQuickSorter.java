@@ -18,7 +18,7 @@ public class NumQuickSorter {
 
     public static void sort(final NumDataSequence seq) {
         NumQuickSorter sorter = new NumQuickSorter(seq);
-        sorter.quicksort3(new Pos(0, seq.size() - 1));
+        sorter.quicksort1(new Pos(0, seq.size() - 1));
     }
 
     /**
