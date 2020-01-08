@@ -1,5 +1,13 @@
 [
   {
+    "name": "swapIfNeededの単体テスト",
+    "command": "./gradlew cleanTest test --tests test.java.sequence.NumDataSequenceTest.unit_NumDataSequence_swapIfNeeded | parser/junit.parser"
+  },
+  {
+    "name": "orderByLowerの単体テスト",
+    "command": "./gradlew cleanTest test --tests test.java.sequence.NumDataSequenceTest.unit_NumDataSequence_orderByLower | parser/junit.parser"
+  },
+  {
     "name": "挿入ソートの全体テスト",
     "command": "./gradlew cleanTest test --tests test.java.MainTest.end2end_SimpleSorter_insert | parser/junit.parser"
   },

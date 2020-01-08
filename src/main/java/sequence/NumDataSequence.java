@@ -47,10 +47,12 @@ public class NumDataSequence {
      * @return boolean スワップしたかどうか
      */
     public boolean swapIfNeeded(int p1, int p2) {
+        // ![1
         // 期待した順番に並んでいたら交換しない
         if (this.order(p1, p2)) return false;
         this.swap(p1, p2);
         return true;
+        // !]
     }
     
     /**
@@ -217,7 +219,9 @@ public class NumDataSequence {
      * @return boolean
      */
     private boolean orderByLower(int p1, int p2) {
+        // ![2
         ComparedState state = this.raw[p1].compare(this.raw[p2]);
         return state == ComparedState.LT || state == ComparedState.EQ;
+        // !]
     } 
 }
