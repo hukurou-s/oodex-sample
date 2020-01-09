@@ -8,6 +8,10 @@
     "command": "./gradlew cleanTest test --tests test.java.sequence.NumDataSequenceTest.unit_NumDataSequence_orderByLower | parser/junit.parser"
   },
   {
+    "name": "整列済み配列の生成の単体テスト",
+    "command": "./gradlew cleanTest test --tests test.java.sequence.NumSequenceGeneratorTest.unit_NumSequenceGenerator_generateOfSorted | parser/junit.parser"
+  },
+  {
     "name": "挿入ソートの全体テスト",
     "command": "./gradlew cleanTest test --tests test.java.MainTest.end2end_SimpleSorter_insert | parser/junit.parser"
   },
