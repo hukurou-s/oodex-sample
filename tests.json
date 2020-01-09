@@ -12,6 +12,18 @@
     "command": "./gradlew cleanTest test --tests test.java.sequence.NumSequenceGeneratorTest.unit_NumSequenceGenerator_generateOfSorted | parser/junit.parser"
   },
   {
+    "name": "NumDataのコンストラクタの単体テスト",
+    "command": "./gradlew cleanTest test --tests test.java.data.NumDataTest.unit_NumData_constructor | parser/junit.parser"
+  },
+  {
+    "name": "NumDataのgetterの単体テスト",
+    "command": "./gradlew cleanTest test --tests test.java.data.NumDataTest.unit_NumData_value | parser/junit.parser"
+  },
+  {
+    "name": "NumDataのcompareの単体テスト",
+    "command": "./gradlew cleanTest test --tests test.java.data.NumDataTest.unit_NumData_compare | parser/junit.parser"
+  },
+  {
     "name": "挿入ソートの全体テスト",
     "command": "./gradlew cleanTest test --tests test.java.MainTest.end2end_SimpleSorter_insert | parser/junit.parser"
   },

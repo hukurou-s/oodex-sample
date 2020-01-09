@@ -10,7 +10,9 @@ public class NumData {
     }
 
     public Integer value() {
+        // ![2
         return this.raw;
+        // !]
     }
 
     /**
@@ -50,7 +52,7 @@ public class NumData {
      * @return {NumData}
      */
     public ComparedState compare(NumData d) {
-        // ![2
+        // ![3
         // a > b のとき
         if (this.raw > d.value()) return ComparedState.GT;
         // a < b のとき
