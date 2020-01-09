@@ -37,13 +37,11 @@ public class NumData {
      * @return {NumData}
      */
     public static NumData getMiddleValue3(final NumData a, final NumData b, final NumData c) {
-        // ![2
         if (within(b, a, c)) return a;
         else if (within(c, a, b)) return a;
         else if (within(a, b, c)) return b;
         else if (within(c, b, a)) return b;
         return c;
-        // !]
     }
 
     /**
@@ -52,11 +50,13 @@ public class NumData {
      * @return {NumData}
      */
     public ComparedState compare(NumData d) {
+        // ![2
         // a > b のとき
         if (this.raw > d.value()) return ComparedState.GT;
         // a < b のとき
         else if (this.raw < d.value()) return ComparedState.LT;
         // a == b のとき
         else return ComparedState.EQ;
+        // !]
     }
 }
