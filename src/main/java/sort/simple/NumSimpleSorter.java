@@ -12,10 +12,12 @@ public class NumSimpleSorter {
     }
 
     public static void insert(final NumDataSequence seq) {
+        // ![1
         int n = seq.size();
         while (n > 0) {
             n = repeatForInsert(seq, n);
         }
+        // !]
     }
 
     public static void gnome(final NumDataSequence seq) {
